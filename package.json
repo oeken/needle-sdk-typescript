@@ -1,0 +1,66 @@
+{
+  "name": "needle-sdk",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      },
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oeken/needle-sdk-typescript.git"
+  },
+  "author": "Onur Eken",
+  "license": "MIT",
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "lilconfig": "^3.1.2",
+    "ulid": "^2.3.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.7",
+    "@types/eslint": "^8.56.10",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^20.14.10",
+    "@typescript-eslint/eslint-plugin": "^8.1.0",
+    "@typescript-eslint/parser": "^8.1.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.2",
+    "tsup": "^ 8.3.4",
+    "typescript": "^5.5.3"
+  },
+  "peerDependencies": {
+    "lucia": "^3.2"
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true,
+    "dts": true,
+    "format": [
+      "cjs",
+      "esm"
+    ]
+  }
+}
