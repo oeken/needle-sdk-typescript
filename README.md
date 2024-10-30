@@ -39,7 +39,7 @@ You must use `needle-sdk` as a run time dependency in your project and use the p
 
 Note that every function requires user authentication. Session token represents a user authentication and you can read the token value from the cookies.
 
-For example usage, see a minimal connector implementation in the [Needle Integrations](https://github.com/oeken/needle-integrations/needle-web-connector) repository.
+For example usage, see connector implementations in the [Needle Integrations](https://github.com/oeken/needle-integrations) repository.
 
 ## Requirements
 
