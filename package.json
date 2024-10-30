@@ -1,8 +1,29 @@
 {
-  "name": "needle-sdk",
-  "version": "0.1.0",
+  "name": "@needle-ai/needle-sdk",
+  "version": "1.0.0",
+  "description": "Developer tools to build integrations and data connectors to Needle",
+  "homepage": "https://github.com/oeken/needle-sdk-typescript",
+  "bugs": {
+    "url": "https://github.com/oeken/needle-sdk-typescript/issues"
+  },
+  "keywords": [
+    "needle",
+    "retrieval-augmented generation",
+    "rag",
+    "sdk",
+    "typescript",
+    "integration",
+    "data",
+    "connector",
+    "artificial intelligence",
+    "ai",
+    "llm"
+  ],
+  "author": "Onur Eken",
+  "license": "MIT",
   "type": "module",
   "main": "dist/index.cjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "require": {
@@ -19,8 +40,6 @@
     "type": "git",
     "url": "git+https://github.com/oeken/needle-sdk-typescript.git"
   },
-  "author": "Onur Eken",
-  "license": "MIT",
   "dependencies": {
     "jsonwebtoken": "^9.0.2",
     "lilconfig": "^3.1.2",
@@ -39,9 +58,7 @@
     "tsup": "^ 8.3.4",
     "typescript": "^5.5.3"
   },
-  "peerDependencies": {
-    "lucia": "^3.2"
-  },
+  "peerDependencies": {},
   "scripts": {
     "build": "tsup"
   },
