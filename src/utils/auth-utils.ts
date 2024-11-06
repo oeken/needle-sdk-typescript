@@ -5,6 +5,9 @@ export async function getJwt(sub: string) {
   if (!process.env.NEEDLE_APP_SECRET) {
     throw new Error("NEEDLE_APP_SECRET is not set");
   }
+  if (!process.env.NEEDLE_APP_ENV) {
+    throw new Error("NEEDLE_APP_ENV is not set");
+  }
   const cfg = await getConfig();
 
   const payload = {
@@ -14,6 +17,7 @@ export async function getJwt(sub: string) {
     exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24, // 1 day
     jti: uuid(),
     appName: cfg.appName,
+    appEnv: process.env.NEEDLE_APP_ENV,
   };
 
   return jwt.sign(payload, process.env.NEEDLE_APP_SECRET);
