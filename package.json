@@ -1,6 +1,6 @@
 {
   "name": "@needle-ai/needle-sdk",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Developer tools to build integrations and data connectors to Needle",
   "homepage": "https://github.com/oeken/needle-sdk-typescript",
   "bugs": {
