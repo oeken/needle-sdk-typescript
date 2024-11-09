@@ -5,7 +5,7 @@ export const NeedleAppConfigSchema = z.object({
   appName: z.string(),
   appSlug: z.string(),
   connectorType: z.string(),
-  connectorLogo: z.string().url(),
+  connectorLogo: z.union([z.string().url().nullish(), z.literal("")]),
 });
 
 export type NeedleAppConfig = z.infer<typeof NeedleAppConfigSchema>;
